@@ -4,7 +4,7 @@ function Notification({ message }) {
   return <p>{message}</p>;
 }
 
-Notification.protoType = {
+Notification.propTypes = {
   message: PropTypes.string.isRequired,
 };
 

@@ -16,7 +16,7 @@ function Statistics({ positivePercentage = 0, ...props }) {
   );
 }
 
-Statistics.protoType = {
+Statistics.propTypes = {
   props: PropTypes.array.isRequired,
   positivePercentage: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
