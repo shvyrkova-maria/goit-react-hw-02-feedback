@@ -1,22 +1,26 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
-function FeedbackOptions() {
-  return <div></div>;
+function FeedbackOptions({ options, onLeaveFeedback }) {
+  return (
+    <div>
+      {options.map(option => {
+        return (
+          <button
+            key={option}
+            type="button"
+            onClick={() => onLeaveFeedback(option)}
+          >
+            {option}
+          </button>
+        );
+      })}
+    </div>
+  );
 }
 
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
+
 export default FeedbackOptions;
-
-// import React, { Component } from 'react';
-// // import PropTypes from 'prop-types'
-
-// class FeedbackOptions extends Component {
-//   // static propTypes = {
-
-//   // }
-
-//   render() {
-//     return <div></div>;
-//   }
-// }
-
-// export default FeedbackOptions;
