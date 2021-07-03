@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import s from 'components/StatsItem/StatsItem.module.css';
 
 function StatsItem({ option, value }) {
   return (
-    <li>
-      <span>{option}</span>
+    <li className={s.item}>
+      <span className={s.option}>{option}:</span>
       <span>
         {value}
         {option === 'Positive feedback' ? '%' : ''}
